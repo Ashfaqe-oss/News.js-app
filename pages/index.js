@@ -1,64 +1,71 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home () {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Created News App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="#">News.js !</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Get Started by clicking any tab you Like
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div onClick={() => router.push('/')} className={styles.grid}>
+          <div href="#" className={styles.card}>
+            <h3> Home &rarr;</h3>
+            <p>This is the Home page</p>
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <div onClick={() => router.push('/feed/1')} className={styles.card}>
+            <h3>Feed&rarr;</h3>
+            <p>Get your Live Feed here</p>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
+          <Link href="/Eom">
+          <div onClick={() => router.push('/Eom')}
+            href="#"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            <h3>Employee of the month &rarr;</h3>
+            <p>Discover who is the Employee of the month</p>
+            </div>
+            </Link>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          <div 
+            href="#"
             className={styles.card}
+            onClick={() => window.location.href = 'https://twitter.com'}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Twitter &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Instantly get to the Twitter Feed of the Developer! Oops
             </p>
-          </a>
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        <div 
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+          
+        </div>
+        <h3>{" "}Ashfaqe</h3>
       </footer>
     </div>
   )
