@@ -70,3 +70,7 @@ export default function Home () {
     </div>
   )
 }
+
+//git remote add origin https://github.com/Ashfaqe-oss/"name".git
+//git branch -M main
+//git push -u origin main
