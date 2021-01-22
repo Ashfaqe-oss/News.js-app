@@ -22,26 +22,14 @@ export default function Home () {
           Get Started by clicking any tab you Like
         </p>
 
-        <div onClick={() => router.push('/')} className={styles.grid}>
-          <div href="#" className={styles.card}>
-            <h3> Home &rarr;</h3>
-            <p>This is the Home page</p>
-          </div>
+        
 
           <div onClick={() => router.push('/feed/1')} className={styles.card}>
             <h3>Feed&rarr;</h3>
             <p>Get your Live Feed here</p>
           </div>
 
-          <Link href="/Eom">
-          <div onClick={() => router.push('/Eom')}
-            href="#"
-            className={styles.card}
-          >
-            <h3>Employee of the month &rarr;</h3>
-            <p>Discover who is the Employee of the month</p>
-            </div>
-            </Link>
+          
 
           <div 
             href="#"
